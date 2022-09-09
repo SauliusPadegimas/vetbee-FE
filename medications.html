@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="./js/meds.js" type="module"></script>
+  <title>Medications</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navi">
+      <div class="container flex justify-between">
+        <a href="./index.html" class="navi__left">
+          <img src="./images/logo.jpg" alt="vetbee logo" class="navi__left_img">
+          <span class="navi__left_text">vetbee</span>
+        </a>
+        <div class="navi__right">
+          <a href="./index.html">Pets</a>
+          <a href="./medications.html">Medications</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="top flex justify-between align-center">
+      <h1>Medications</h1>
+      <button class="addBtn">ADD MEDICATION</button>
+    </section>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Medication</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody id="outputTable">
+          <!-- generuojam su js -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="container">Copyright &copy; VetBee 2022. All rights reserved.</footer>
+</body>
+
+</html>

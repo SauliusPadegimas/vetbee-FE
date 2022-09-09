@@ -7,20 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VetBee</title>
   <link rel="stylesheet" href="./style/style.css" />
-  <script src="./js/main.js" defer></script>
+  <script src="./js/main.js" type="module"></script>
 </head>
 
 <body>
   <header>
     <nav class="navi">
       <div class="container flex justify-between">
-        <div class="navi__left">
+        <a href="./index.html" class="navi__left">
           <img src="./images/logo.jpg" alt="vetbee logo" class="navi__left_img">
           <span class="navi__left_text">vetbee</span>
-        </div>
+        </a>
         <div class="navi__right">
-          <a href="">Pets</a>
-          <a href="">Medications</a>
+          <a href="./index.html">Pets</a>
+          <a href="./medications.html">Medications</a>
         </div>
       </div>
     </nav>
@@ -30,34 +30,7 @@
         <button class="addBtn">ADD PET</button>
       </section>
       <section id="output">
-        <div class="card">
-          <h3>Levis</h3>
-          <p>2001-12-25</p>
-          <p>pertas@petras.lt</p>
-          <button>VIEW LOG</button>
-          <button>DELETE</button>
-        </div>
-        <div class="card">
-          <h3>Levis</h3>
-          <p>2001-12-25</p>
-          <p>pertas@petras.lt</p>
-          <button>VIEW LOG</button>
-          <button>DELETE</button>
-        </div>
-        <div class="card">
-          <h3>Levis</h3>
-          <p>2001-12-25</p>
-          <p>pertas@petras.lt</p>
-          <button>VIEW LOG</button>
-          <button>DELETE</button>
-        </div>
-        <div class="card">
-          <h3>Levis</h3>
-          <p>2001-12-25</p>
-          <p>pertas@petras.lt</p>
-          <button>VIEW LOG</button>
-          <button>DELETE</button>
-        </div>
+        <!-- generuojam su js -->
       </section>
     </main>
     <footer class="container">Copyright &copy; VetBee 2022. All rights reserved.</footer>
