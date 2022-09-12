@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
   <script src="./js/logs.js" type="module"></script>
+  <script src="./js/add-log.js" type="module"></script>
+  <script src="./js/add-prescription.js" type="module"></script>
   <title>Logs</title>
 </head>
 
@@ -25,12 +27,44 @@
       </div>
     </nav>
     <main class="container">
+      <form id="popupLogs" class="popup">
+        <div id="closeX">x</div>
+        <h2>Save new log</h2>
+        <br>
+        <input type="text" id="descriptionIn" placeholder="Description..." />
+        <input type="text" id="statusIn" placeholder="Status..." />
+        <button type="submit" id="">Save</button>
+      </form>
+      <form id="popupPres" class="popup">
+        <div id="closeX">x</div>
+        <h2>Create new prescription</h2>
+        <br>
+        <input type="number" id="medicationIn" placeholder="Medications ID..." />
+        <input type="text" id="commentIn" placeholder="Comment..." />
+        <button type="submit" id="">Save</button>
+      </form>
       <section class="top flex justify-between align-center">
-        <h1>Health Records</h1>
-        <button class="addBtn">ADD PRESCRIPTION</button>
+        <h1 id="title">Health Records</h1>
+        <div>
+          <button class="addBtn" id="addPresBtn">ADD PRESCRIPTION</button>
+          <button class="deleteBtn" id="addLogBtn">ADD LOG</button>
+        </div>
       </section>
       <section id="output">
         <!-- generuojam su js -->
+      </section>
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="outputLogs">
+            <!-- generuojam su js -->
+          </tbody>
+        </table>
       </section>
     </main>
     <footer class="container">Copyright &copy; VetBee 2022. All rights reserved.</footer>

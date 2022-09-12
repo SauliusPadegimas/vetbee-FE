@@ -29,17 +29,18 @@ class App {
         },
         body: JSON.stringify(data),
       });
+      const answer = await resp.json();
+      console.log('answer from server ===', answer);
       if (!resp.ok) {
         throw new Error(
           `fetch fail: ${resp.status} ${resp.statusText} trying to fetch ${resp.url}`
         );
       }
-
       return true;
     } catch (error) {
       console.warn('klaida http ', error.message);
       console.warn('error.stack ', error.stack);
-      return error;
+      return false;
     }
   }
 }
@@ -73,6 +74,19 @@ export class LogsService extends App {
   }
 
   static create(newLogObj) {
-    return App.send('/logs', 'POST', newLogObj);
+    return App.send(`/logs`, 'POST', newLogObj);
+  }
+}
+export class PressService extends App {
+  static getPres(id) {
+    return App.getAll(`/prescriptions/${id}`);
+  }
+
+  static delete(id) {
+    return App.send(`/prescriptions/${id}`, 'DELETE');
+  }
+
+  static create(id, newPresObj) {
+    return App.send(`/prescriptions/${id}`, 'POST', newPresObj);
   }
 }

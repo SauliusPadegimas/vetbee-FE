@@ -1,8 +1,10 @@
 import UI from './modules/class/UI.js';
 
-const form = document.getElementById('popup');
-const addBtn = document.getElementById('addBtn');
-const closeBtn = document.getElementById('closeX');
+const form = document.getElementById('popupPres');
+const addBtn = document.getElementById('addPresBtn');
+const closeBtn = form.querySelector('#closeX');
+const urlParams = new URLSearchParams(window.location.search);
+const petId = urlParams.get('petId');
 
 addBtn.addEventListener('click', () => {
   form.style.display = 'block';
@@ -14,7 +16,7 @@ closeBtn.addEventListener('click', () => {
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  if (await UI.addPet(form)) {
+  if (await UI.addPres(form, petId)) {
     window.location.reload();
   }
 });

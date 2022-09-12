@@ -8,6 +8,7 @@
   <title>VetBee</title>
   <link rel="stylesheet" href="./style/style.css" />
   <script src="./js/main.js" type="module"></script>
+  <script src="./js/add-pet.js" type="module"></script>
 </head>
 
 <body>
@@ -24,17 +25,25 @@
         </div>
       </div>
     </nav>
-    <main class="container">
-      <section class="top flex justify-between align-center">
-        <h1>Pet List</h1>
-        <button class="addBtn">ADD PET</button>
-      </section>
-      <section id="output">
-        <!-- generuojam su js -->
-      </section>
-    </main>
-    <footer class="container">Copyright &copy; VetBee 2022. All rights reserved.</footer>
   </header>
+  <main class="container">
+    <form id="popup" class="popup">
+      <div id="closeX">x</div>
+      <input type="date" id="dateIn" class="dateIn" />
+      <input type="text" class="nameIn" id="nameIn" placeholder="Pet name..." />
+      <input type="email" id="emailIn" class="emailIn" placeholder="Client email..." />
+      <button type="submit" id="">Save</button>
+    </form>
+    <section class="top flex justify-between align-center">
+      <h1>Pet List</h1>
+      <button class="addBtn" id="addBtn">ADD PET</button>
+    </section>
+    <section id="output">
+      <!-- generuojam su js -->
+    </section>
+  </main>
+  <footer class="container">Copyright &copy; VetBee 2022. All rights reserved.</footer>
+
 </body>
 
 </html>

@@ -5,10 +5,6 @@
   --font-color: grey;
 }
 
-th,
-td {
-  border: 1px dotted var(--border-color);
-}
 .navi {
   height: 4rem;
   border-bottom: 1px solid var(--border-color);
@@ -38,6 +34,9 @@ td {
   margin-left: 1rem;
 }
 
+main {
+  position: relative;
+}
 .top {
   margin: 10px 0;
 }
@@ -67,6 +66,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -83,22 +83,72 @@ footer {
   margin: 1rem;
 }
 
-.card > button {
+.card > button,
+form > button {
   padding: 10px 30px;
   font-size: 0.7rem;
   font-weight: bold;
   border-radius: 10px;
-  border: 1px solid #000000;
   margin: 1.5rem 0.2rem 1rem;
 }
 
-.card button:first-of-type {
+.card button:first-of-type,
+form > button {
   background-color: var(--main-color);
   color: white;
   border-color: var(--main-color);
 }
-.card button:last-of-type {
+
+.deleteBtn {
   background-color: white;
   color: var(--main-color);
-  border-color: var(--main-color);
+  border: 1px solid var(--main-color) !important;
+  padding: 10px 30px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.popup {
+  text-align: center;
+  width: 300px;
+  background-color: #fff;
+  margin: 10px auto;
+  padding: 12px;
+  color: var(--font-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  box-shadow: 0px 0px 0px 1800px rgb(0 0 0 / 65%);
+  border-radius: 4px;
+  display: none;
+}
+.dateIn {
+  color: var(--font-color);
+}
+#closeX {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+}
+
+.w30 {
+  width: 30%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: var(--font-color);
+}
+
+td,
+th {
+  padding: 0.3rem 1rem;
+  border: 1px solid var(--main-color);
+}
+thead {
+  text-align: left;
 }
